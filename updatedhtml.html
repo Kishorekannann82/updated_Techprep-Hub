@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Course</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #43cea2, #185a9d);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .html-container {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 30px;
+      border-radius: 10px;
+      width: 70%;
+      max-width: 1200px;
+      margin: 20px auto;
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+
+    .html-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ffd740;
+    }
+
+    .learning-section {
+      margin-bottom: 20px;
+    }
+
+    .learning-section h3 {
+      margin-bottom: 10px;
+      color: #ffca28;
+    }
+
+    .learning-section ul {
+      list-style-type: square;
+      margin-left: 20px;
+    }
+
+    pre {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    .tips {
+      background-color: #212121;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .tips h4 {
+      color: #ffab00;
+    }
+
+    .tips ul {
+      margin-left: 20px;
+    }
+
+    .back-button {
+      display: block;
+      margin: 20px auto 0;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ff6f00;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .back-button:hover {
+      background-color: #ffd740;
+    }
+
+    @media (max-width: 768px) {
+      .html-container {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="html-container">
+    <h2>HTML Learning Content</h2>
+
+    <div class="learning-section">
+      <h3>Introduction to HTML</h3>
+      <p>
+        HTML (HyperText Markup Language) is the standard language for creating web pages. It provides the basic structure of a website, which is enhanced and modified by CSS and JavaScript. HTML is easy to learn and widely used by developers worldwide.
+      </p>
+    </div>
+
+    <div class="learning-section">
+      <h3>A Brief History of HTML</h3>
+      <p>
+        HTML was created by Tim Berners-Lee in 1991 as a way to structure content on the World Wide Web. Over the years, it has evolved significantly:
+      </p>
+      <ul>
+        <li><strong>HTML 1.0</strong>: The first version, focused on simple web pages.</li>
+        <li><strong>HTML 4.01</strong>: Introduced CSS integration and improved functionality.</li>
+        <li><strong>HTML5</strong>: Released in 2014, it brought modern features like multimedia support, semantic elements, and APIs for dynamic content.</li>
+      </ul>
+    </div>
+
+    <div class="learning-section">
+      <h3>Basic HTML Structure</h3>
+      <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to HTML&lt;/h1&gt;
+    &lt;p&gt;HTML is easy to learn!&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+      </code></pre>
+    </div>
+
+    <div class="learning-section">
+      <h3>HTML with CSS</h3>
+      <p>
+        CSS (Cascading Style Sheets) is used to style HTML content. You can add CSS in three ways:
+      </p>
+      <ul>
+        <li><strong>Inline CSS</strong>: Directly within an HTML element using the <code>style</code> attribute.</li>
+        <li><strong>Internal CSS</strong>: Inside a <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code>.</li>
+        <li><strong>External CSS</strong>: Linked via a <code>&lt;link&gt;</code> tag to an external stylesheet file.</li>
+      </ul>
+      <p>Example of an external CSS file:</p>
+      <pre><code>
+/* styles.css */
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+      </code></pre>
+    </div>
+
+    <div class="learning-section">
+      <h3>JavaScript in HTML</h3>
+      <p>
+        JavaScript is a scripting language that brings interactivity to web pages. You can add JavaScript:
+      </p>
+      <ul>
+        <li><strong>Inline</strong>: Using the <code>onclick</code> or <code>onchange</code> attributes.</li>
+        <li><strong>Internal</strong>: Within a <code>&lt;script&gt;</code> tag in the <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code>.</li>
+        <li><strong>External</strong>: Linking to a separate .js file with the <code>&lt;script&gt;</code> tag.</li>
+      </ul>
+      <p>Example of adding a JavaScript alert:</p>
+      <pre><code>
+&lt;button onclick="alert('Hello, World!')"&gt;Click Me&lt;/button&gt;
+      </code></pre>
+    </div>
+
+    <div class="learning-section">
+      <h3>What's New in HTML5?</h3>
+      <ul>
+        <li>Semantic tags like <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;aside&gt;</code> for better structure.</li>
+        <li>Built-in support for audio and video with <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> tags.</li>
+        <li>Canvas for drawing graphics with JavaScript using the <code>&lt;canvas&gt;</code> tag.</li>
+        <li>Geolocation API for accessing the user's location.</li>
+        <li>Web Storage API for local data storage using <code>localStorage</code> and <code>sessionStorage</code>.</li>
+      </ul>
+    </div>
+
+    <div class="tips">
+      <h4>Pro Tips</h4>
+      <ul>
+        <li>Keep your HTML code clean and well-structured for better readability.</li>
+        <li>Use semantic tags for better SEO and accessibility.</li>
+        <li>Separate content (HTML), styling (CSS), and behavior (JavaScript) for modular development.</li>
+        <li>Always test your web pages on multiple browsers for compatibility.</li>
+        <li>Learn the basics of browser developer tools to debug your code efficiently.</li>
+        <li>Use version control systems like Git to manage your web development projects.</li>
+      </ul>
+    </div>
+
+    <a href="updatedcourse.html" class="back-button">Back to Courses</a>
+  </div>
+</body>
+</html>

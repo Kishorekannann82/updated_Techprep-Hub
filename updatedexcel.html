@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excel Data Analytics Course</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #f0f0f0, #dfe9f3);
+      color: #333;
+      padding: 40px;
+      line-height: 1.6;
+    }
+
+    /* Container Styling */
+    .course-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+
+    .section-title {
+      font-size: 26px;
+      margin-top: 30px;
+      color: #2980b9;
+    }
+
+    .formula-section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #ecf0f1;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .formula-section h3 {
+      color: #16a085;
+      margin-bottom: 10px;
+    }
+
+    .formula-section ul {
+      list-style-type: none;
+      margin-left: 20px;
+    }
+
+    .formula-section li {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .formula-section pre {
+      background-color: #34495e;
+      color: #ecf0f1;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      overflow-x: auto;
+    }
+
+    .back-button {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 30px;
+      background-color: #2980b9;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #3498db;
+    }
+
+    .shortcuts {
+      background-color: #f7b731;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .shortcuts h3 {
+      color: #e74c3c;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .shortcuts ul {
+      list-style-type: square;
+      padding-left: 20px;
+      font-size: 16px;
+    }
+
+    .shortcuts li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="course-container">
+    <h1>Excel Data Analytics Course: Essential Formulas & Shortcuts</h1>
+
+    <p>Welcome to the Excel Data Analytics Course. This guide covers essential Excel formulas for data analysis and useful keyboard shortcuts to help you navigate and perform tasks more efficiently in Excel.</p>
+
+    <!-- Basic Excel Formulas -->
+    <div class="formula-section">
+      <h3>1. Basic Excel Formulas</h3>
+      <ul>
+        <li><b>SUM:</b> Adds up a series of numbers.</li>
+        <pre><code>=SUM(A1:A10)</code></pre>
+
+        <li><b>AVERAGE:</b> Returns the average of a range of numbers.</li>
+        <pre><code>=AVERAGE(A1:A10)</code></pre>
+
+        <li><b>COUNT:</b> Counts the number of cells that contain numbers.</li>
+        <pre><code>=COUNT(A1:A10)</code></pre>
+
+        <li><b>COUNTA:</b> Counts the number of non-empty cells.</li>
+        <pre><code>=COUNTA(A1:A10)</code></pre>
+
+        <li><b>MIN:</b> Returns the smallest value in a range of numbers.</li>
+        <pre><code>=MIN(A1:A10)</code></pre>
+
+        <li><b>MAX:</b> Returns the largest value in a range of numbers.</li>
+        <pre><code>=MAX(A1:A10)</code></pre>
+
+        <li><b>IF:</b> Performs a logical test and returns one value if TRUE and another if FALSE.</li>
+        <pre><code>=IF(A1 > 10, "Yes", "No")</code></pre>
+      </ul>
+    </div>
+
+    <!-- Lookup Formulas -->
+    <div class="formula-section">
+      <h3>2. Lookup & Reference Formulas</h3>
+      <ul>
+        <li><b>VLOOKUP:</b> Looks for a value in the first column of a table and returns a value in the same row from another column.</li>
+        <pre><code>=VLOOKUP(A1, B1:C10, 2, FALSE)</code></pre>
+
+        <li><b>HLOOKUP:</b> Similar to VLOOKUP but searches for data in rows instead of columns.</li>
+        <pre><code>=HLOOKUP(A1, A2:D10, 2, FALSE)</code></pre>
+
+        <li><b>INDEX:</b> Returns the value of a cell in a given row and column from a specified range.</li>
+        <pre><code>=INDEX(A1:C10, 2, 3)</code></pre>
+
+        <li><b>MATCH:</b> Returns the relative position of an item in a range that matches a specified value.</li>
+        <pre><code>=MATCH("Product A", A1:A10, 0)</code></pre>
+      </ul>
+    </div>
+
+    <!-- Logical Formulas -->
+    <div class="formula-section">
+      <h3>3. Logical Formulas</h3>
+      <ul>
+        <li><b>AND:</b> Returns TRUE if all conditions are TRUE.</li>
+        <pre><code>=AND(A1 > 10, B1 < 5)</code></pre>
+
+        <li><b>OR:</b> Returns TRUE if any condition is TRUE.</li>
+        <pre><code>=OR(A1 > 10, B1 < 5)</code></pre>
+
+        <li><b>NOT:</b> Reverses the logical value (TRUE becomes FALSE and vice versa).</li>
+        <pre><code>=NOT(A1 > 10)</code></pre>
+      </ul>
+    </div>
+
+    <!-- Date and Time Formulas -->
+    <div class="formula-section">
+      <h3>4. Date & Time Formulas</h3>
+      <ul>
+        <li><b>TODAY:</b> Returns the current date.</li>
+        <pre><code>=TODAY()</code></pre>
+
+        <li><b>NOW:</b> Returns the current date and time.</li>
+        <pre><code>=NOW()</code></pre>
+
+        <li><b>DATE:</b> Returns a date based on a specified year, month, and day.</li>
+        <pre><code>=DATE(2023, 12, 31)</code></pre>
+
+        <li><b>DAYS:</b> Calculates the number of days between two dates.</li>
+        <pre><code>=DAYS(A1, A2)</code></pre>
+      </ul>
+    </div>
+
+    <!-- Statistical Formulas -->
+    <div class="formula-section">
+      <h3>5. Statistical Formulas</h3>
+      <ul>
+        <li><b>STDEV:</b> Calculates the standard deviation of a set of values.</li>
+        <pre><code>=STDEV(A1:A10)</code></pre>
+
+        <li><b>VAR:</b> Calculates the variance of a set of numbers.</li>
+        <pre><code>=VAR(A1:A10)</code></pre>
+
+        <li><b>CORREL:</b> Returns the correlation coefficient between two data sets.</li>
+        <pre><code>=CORREL(A1:A10, B1:B10)</code></pre>
+      </ul>
+    </div>
+
+    <!-- Financial Formulas -->
+    <div class="formula-section">
+      <h3>6. Financial Formulas</h3>
+      <ul>
+        <li><b>PMT:</b> Calculates the payment for a loan based on constant payments and a constant interest rate.</li>
+        <pre><code>=PMT(interest_rate, number_of_periods, loan_amount)</code></pre>
+
+        <li><b>FV:</b> Calculates the future value of an investment based on constant payments and a constant interest rate.</li>
+        <pre><code>=FV(rate, nper, pmt, [pv], [type])</code></pre>
+      </ul>
+    </div>
+
+    <!-- Excel Shortcuts -->
+    <div class="shortcuts">
+      <h3>Useful Excel Shortcuts for Efficiency</h3>
+      <ul>
+        <li><b>Ctrl + C:</b> Copy selected cells.</li>
+        <li><b>Ctrl + V:</b> Paste copied cells.</li>
+        <li><b>Ctrl + Z:</b> Undo the previous action.</li>
+        <li><b>Ctrl + Shift + L:</b> Toggle filters on or off.</li>
+        <li><b>Ctrl + Arrow Key:</b> Navigate to the edge of the data.</li>
+        <li><b>Alt + E, S, V:</b> Paste special (useful for pasting values or formatting).</li>
+        <li><b>Ctrl + T:</b> Convert a range of data into a table.</li>
+        <li><b>F2:</b> Edit the selected cell.</li>
+      </ul>
+    </div>
+
+    <a href="updatedcourse.html" class="back-button">Back to Course</a>
+  </div>
+</body>
+</html>

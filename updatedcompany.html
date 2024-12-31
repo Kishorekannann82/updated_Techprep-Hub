@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company-Specific Programming Questions</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #141e30, #243b55);
+      color: #f0f0f0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    /* Container Styling */
+    .course-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: rgba(20, 34, 43, 0.9);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #00cec9;
+    }
+
+    .topic {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #1b2a35;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .topic h3 {
+      color: #00cec9;
+      margin-bottom: 10px;
+    }
+
+    .topic p,
+    .topic ul {
+      margin: 0;
+      color: #dfe6e9;
+    }
+
+    .topic ul {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    pre {
+      background-color: #2e4053;
+      color: #dcdde1;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .back-button {
+      display: block;
+      margin: 30px auto 0;
+      padding: 15px 30px;
+      font-size: 16px;
+      background-color: #00cec9;
+      color: black;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .back-button:hover {
+      background-color: #01b2a3;
+    }
+  </style>
+</head>
+<body>
+  <div class="course-container">
+    <h1>Company-Specific Programming Questions</h1>
+
+    <!-- Introduction Section -->
+    <div class="topic">
+      <h3>1. Introduction</h3>
+      <p>Welcome to the Company-Specific Programming Questions course! This course is designed to help you prepare for coding interviews at top tech companies like Google, Amazon, Microsoft, Facebook, and others.</p>
+      <p>Key features of this course:</p>
+      <ul>
+        <li>Detailed explanations of coding problems from top tech companies.</li>
+        <li>Step-by-step walkthroughs of solutions.</li>
+        <li>Practical tips on how to approach company-specific interview questions.</li>
+      </ul>
+    </div>
+
+    <!-- Google Questions Section -->
+    <div class="topic">
+      <h3>2. Google Interview Questions</h3>
+      <p>Google interview questions typically focus on algorithms, data structures, and problem-solving. Common topics include:</p>
+      <ul>
+        <li>Arrays and Strings</li>
+        <li>Recursion and Dynamic Programming</li>
+        <li>Graphs and Trees</li>
+        <li>System Design</li>
+      </ul>
+      <p>Example Google Problem:</p>
+      <pre><code>
+// Example: Google Interview Problem - Find the missing number in an array
+int findMissing(int[] arr) {
+    int n = arr.length;
+    int expectedSum = n * (n + 1) / 2;
+    int actualSum = 0;
+    for (int num : arr) {
+        actualSum += num;
+    }
+    return expectedSum - actualSum;
+}
+      </code></pre>
+    </div>
+
+    <!-- Amazon Questions Section -->
+    <div class="topic">
+      <h3>3. Amazon Interview Questions</h3>
+      <p>Amazon's coding interviews often emphasize problem-solving skills and the ability to work in a team. Common problem areas include:</p>
+      <ul>
+        <li>String Manipulation</li>
+        <li>Arrays and Hashing</li>
+        <li>Sorting and Searching</li>
+        <li>Object-Oriented Design</li>
+      </ul>
+      <p>Example Amazon Problem:</p>
+      <pre><code>
+// Example: Amazon Interview Problem - Check if a string is a palindrome
+boolean isPalindrome(String str) {
+    int left = 0, right = str.length() - 1;
+    while (left < right) {
+        if (str.charAt(left) != str.charAt(right)) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+}
+      </code></pre>
+    </div>
+
+    <!-- Microsoft Questions Section -->
+    <div class="topic">
+      <h3>4. Microsoft Interview Questions</h3>
+      <p>Microsoft interviews typically focus on logic and problem-solving ability. Some common topics include:</p>
+      <ul>
+        <li>Bit Manipulation</li>
+        <li>Linked Lists</li>
+        <li>Stacks and Queues</li>
+        <li>Dynamic Programming</li>
+      </ul>
+      <p>Example Microsoft Problem:</p>
+      <pre><code>
+// Example: Microsoft Interview Problem - Reverse a Linked List
+class Node {
+    int data;
+    Node next;
+    Node(int data) { this.data = data; }
+}
+
+Node reverse(Node head) {
+    Node prev = null, curr = head, next = null;
+    while (curr != null) {
+        next = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = next;
+    }
+    return prev;
+}
+      </code></pre>
+    </div>
+
+    <!-- Facebook Questions Section -->
+    <div class="topic">
+      <h3>5. Facebook Interview Questions</h3>
+      <p>Facebook is known for its challenging coding questions, especially those that test your ability to think under pressure. They commonly test:</p>
+      <ul>
+        <li>Binary Trees</li>
+        <li>Hash Tables</li>
+        <li>Graph Traversals</li>
+        <li>Algorithms and Optimization</li>
+      </ul>
+      <p>Example Facebook Problem:</p>
+      <pre><code>
+// Example: Facebook Interview Problem - Find the shortest path in a graph (BFS)
+void bfs(Graph graph, int startNode) {
+    Queue queue = new LinkedList();
+    Set<Integer> visited = new HashSet<>();
+    queue.add(startNode);
+    visited.add(startNode);
+
+    while (!queue.isEmpty()) {
+        int currentNode = queue.poll();
+        System.out.println(currentNode);
+        for (int neighbor : graph.getNeighbors(currentNode)) {
+            if (!visited.contains(neighbor)) {
+                visited.add(neighbor);
+                queue.add(neighbor);
+            }
+        }
+    }
+}
+      </code></pre>
+    </div>
+
+    <!-- Interview Tips Section -->
+    <div class="topic">
+      <h3>6. Interview Tips</h3>
+      <p>Preparation is key to acing any coding interview. Here are some tips:</p>
+      <ul>
+        <li><b>Practice consistently:</b> Work on coding challenges daily.</li>
+        <li><b>Understand the fundamentals:</b> Master data structures and algorithms.</li>
+        <li><b>Mock interviews:</b> Simulate real interview conditions with peers or mentors.</li>
+        <li><b>Stay calm:</b> Think clearly and explain your thought process during interviews.</li>
+      </ul>
+    </div>
+	<h3>6. Interview Tips</h3>
+<p>Preparation is key to acing any coding interview. Here are some additional tips to improve your chances of success:</p>
+<ul>
+  <li><b>Practice consistently:</b> Work on coding challenges daily. Regular practice on platforms like LeetCode, Codeforces, and HackerRank helps you become familiar with problem-solving techniques and improves your speed.</li>
+  
+  <li><b>Understand the fundamentals:</b> Master data structures and algorithms. Ensure you are comfortable with:
+    <ul>
+      <li>Arrays, Strings, Linked Lists</li>
+      <li>Stacks, Queues, Heaps</li>
+      <li>Binary Trees, Binary Search Trees, Graphs</li>
+      <li>Sorting and Searching Algorithms</li>
+      <li>Dynamic Programming and Greedy Algorithms</li>
+      <li>Recursion, Backtracking, and Divide and Conquer</li>
+    </ul>
+  </li>
+
+  <li><b>Mock interviews:</b> Simulate real interview conditions with peers or mentors. Mock interviews are a great way to get used to the time pressure and learn how to structure your thought process when solving problems in a limited time frame. You can use platforms like Interviewing.io or Pramp to practice mock interviews.</li>
+  
+  <li><b>Stay calm:</b> Think clearly and explain your thought process during interviews. Many interviewers care more about how you approach the problem than whether or not you get the correct answer. Communicate your thoughts step by step, and don't be afraid to ask clarifying questions if you're unsure about the problem.</li>
+
+  <li><b>Optimize your solution:</b> After solving a problem, think about its time and space complexity. Can it be optimized? For example, if you’ve solved a problem using brute force, can you improve it using a more efficient algorithm or data structure?</li>
+
+  <li><b>Understand the problem fully:</b> Before jumping into coding, make sure you have a clear understanding of the problem. Break it down, and identify edge cases (e.g., empty input, large inputs, negative numbers). Write test cases to ensure your solution is robust.</li>
+  
+  <li><b>Write clean code:</b> Write legible and maintainable code. Avoid unnecessarily complex logic, and follow proper coding conventions (e.g., meaningful variable names, proper indentation). It's important to show that you're not just solving the problem but also writing clean, readable code.</li>
+  
+  <li><b>Prepare for system design interviews:</b> Many top tech companies, including Google, Amazon, and Microsoft, include system design interviews. You need to practice designing large-scale systems, understanding how to handle large amounts of data, handle traffic, and ensure scalability. Practice on common system design questions such as:
+    <ul>
+      <li>Design a URL shortening service (like bit.ly)</li>
+      <li>Design a social media feed</li>
+      <li>Design an online book store (like Amazon)</li>
+      <li>Design a cache system</li>
+      <li>Design a recommendation system</li>
+    </ul>
+  </li>
+
+  <li><b>Behavioral questions:</b> Be ready to answer behavioral questions about your previous work experience and how you handle challenges. Use the STAR method (Situation, Task, Action, Result) to structure your answers. Example questions include:
+    <ul>
+      <li>Tell me about a time when you faced a difficult problem at work and how you solved it.</li>
+      <li>Describe a situation where you had to work as part of a team to accomplish a goal.</li>
+      <li>How do you handle tight deadlines and multiple priorities?</li>
+    </ul>
+  </li>
+
+  <li><b>Prepare for coding challenges with a whiteboard or IDE:</b> Some companies may conduct technical interviews using whiteboards (in-person) or online coding platforms (virtual). Be prepared to write code without relying on auto-completion or hints. If you're using an IDE, ensure you are familiar with the shortcuts and features that can speed up your coding.</li>
+  
+  <li><b>Learn from each interview:</b> After each interview, reflect on what went well and what you can improve. Take notes, and identify any patterns in the types of problems you were asked. This will help you focus on areas that need more practice.</li>
+</ul>
+
+<h4>Popular Interview Questions Topics</h4>
+<p>Here are some common interview question categories you may encounter at top tech companies:</p>
+<ul>
+  <li><b>Array and String Manipulation:</b> These are common topics that often involve solving problems using sliding windows, hashing, and dynamic programming.
+    <ul>
+      <li>Find the longest substring without repeating characters.</li>
+      <li>Two-sum problem.</li>
+      <li>Rotate an array.</li>
+    </ul>
+  </li>
+  
+  <li><b>Linked Lists:</b> Linked lists are an important data structure to understand. Practice problems like reversing a linked list, detecting a cycle, and finding the middle element of a linked list.</li>
+  
+  <li><b>Dynamic Programming:</b> DP is a critical area for many tech interviews. Examples include:
+    <ul>
+      <li>Longest common subsequence.</li>
+      <li>0/1 Knapsack problem.</li>
+      <li>Fibonacci sequence optimization.</li>
+    </ul>
+  </li>
+  
+  <li><b>Sorting and Searching:</b> Understand common algorithms such as QuickSort, MergeSort, and Binary Search. Be prepared to solve problems related to sorting an array or searching for an element in a sorted array.</li>
+  
+  <li><b>Graphs:</b> Graph-related problems often require knowledge of BFS, DFS, and shortest path algorithms.
+    <ul>
+      <li>Find the shortest path in a graph.</li>
+      <li>Detect a cycle in a graph.</li>
+      <li>Implement breadth-first search and depth-first search.</li>
+    </ul>
+  </li>
+  
+  <li><b>System Design:</b> Large-scale systems and scalability problems are commonly asked in system design interviews.
+    <ul>
+      <li>Design a chat system.</li>
+      <li>Design an elevator system.</li>
+      <li>Design a file storage system like Dropbox.</li>
+    </ul>
+  </li>
+  
+  <li><b>Concurrency and Multithreading:</b> In interviews for companies like Google, you might be asked to solve problems that involve multithreading, race conditions, or deadlock resolution.
+    <ul>
+      <li>Design a thread-safe data structure.</li>
+      <li>Implement a producer-consumer problem using semaphores.</li>
+    </ul>
+  </li>
+</ul>
+
+
+    <!-- Back Button -->
+    <a href="updatedcourse.html" class="back-button">Back to Home</a>
+  </div>
+</body>
+</html>

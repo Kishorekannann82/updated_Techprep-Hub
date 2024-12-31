@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses</title>
+  <style>
+    /* Reset default margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Set background gradient and font for the page */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #43cea2, #185a9d); /* Same background as login/register */
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      min-height: 100vh;
+      color: white;
+      padding: 20px;
+    }
+
+    /* General container styles for courses */
+    .courses-container {
+      text-align: center;
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    /* Course grid layout: 3 courses per row */
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 courses per row */
+      gap: 20px;
+      padding: 10px;
+    }
+
+    /* Individual course card styles */
+    .course-card {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 25px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      max-width: 300px; /* Control the max width of each card */
+      margin: auto;
+    }
+
+    .course-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .course-card a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .course-card h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .course-card p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    /* Adjust card size and content */
+    @media (max-width: 1024px) {
+      .course-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 courses per row on medium screens */
+      }
+
+      .course-card h3 {
+        font-size: 20px;
+      }
+
+      .course-card p {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .course-grid {
+        grid-template-columns: 1fr; /* 1 course per row on small screens */
+      }
+
+      .course-card {
+        padding: 20px;
+      }
+
+      .course-card h3 {
+        font-size: 18px;
+      }
+
+      .course-card p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="courses-container">
+    <h2>Available Courses</h2>
+    <div class="course-grid">
+      <div class="course-card">
+        <a href="updatedsql.html">
+          <h3>SQL Course</h3>
+          <p>Learn SQL basics and advanced topics.</p>
+        </a>
+      </div>
+      <div class="course-card">
+        <a href="updatedhtml.html">
+          <h3>HTML Course</h3>
+          <p>Master HTML, the foundation of web development.</p>
+        </a>
+      </div>
+      <div class="course-card">
+        <a href="updatedpython.html">
+          <h3>Python Course</h3>
+          <p>Learn Python for data science, automation, and more.</p>
+        </a>
+      </div>
+
+      <!-- Additional courses -->
+      <div class="course-card">
+        <a href="updatedinterview.html" target="_blank">
+          <h3>Interview Questions</h3>
+          <p>Prepare for technical interviews with common questions.</p>
+        </a>
+      </div>
+      <div class="course-card">
+        <a href="updatedjavascript.html">
+          <h3>JavaScript Course</h3>
+          <p>Learn JavaScript to create dynamic and interactive web applications.</p>
+        </a>
+      </div>
+      <div class="course-card">
+        <a href="updateddsa.html">
+          <h3>Data Structures and Algorithms</h3>
+          <p>Master DSA concepts to excel in coding interviews and problem-solving.</p>
+        </a>
+      </div>
+
+      <!-- Updated courses -->
+      <div class="course-card">
+        <a href="updatedcompany.html">
+          <h3>Company-Specific Programming Questions</h3>
+          <p>Prepare for company-specific coding challenges and interviews.</p>
+        </a>
+      </div>
+      <div class="course-card">
+        <a href="updatedexcel.html">
+          <h3>MS Excel Course</h3>
+          <p>Learn to use MS Excel efficiently for data analysis and visualization.</p>
+        </a>
+      </div>
+      <div class="course-card">
+        <a href="updatedembedded.html">
+          <h3>Embedded C Course</h3>
+          <p>Learn Embedded C programming for embedded systems development.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

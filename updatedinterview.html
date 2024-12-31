@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQL Interview Questions</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: #e6e6e6;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    /* Container Styling */
+    .interview-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: rgba(15, 32, 39, 0.9);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #ffd700;
+    }
+
+    .question {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #1e3c47;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .question h3 {
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+
+    .question p,
+    .question ul {
+      margin: 0;
+      color: #c4c4c4;
+    }
+
+    .question ul {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    pre {
+      background-color: #2c3e50;
+      color: #e8e8e8;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .back-button {
+      display: block;
+      margin: 30px auto 0;
+      padding: 15px 30px;
+      font-size: 16px;
+      background-color: #ffd700;
+      color: black;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .back-button:hover {
+      background-color: #f4c10f;
+    }
+  </style>
+</head>
+<body>
+  <div class="interview-container">
+    <h1>SQL Interview Questions</h1>
+
+    <!-- Existing Questions -->
+    <div class="question">
+      <h3>1. What is SQL?</h3>
+      <p>SQL (Structured Query Language) is a standard language for accessing and manipulating databases.</p>
+    </div>
+
+    <div class="question">
+      <h3>2. What is the difference between DELETE and TRUNCATE?</h3>
+      <p>
+        - <b>DELETE:</b> Removes specific rows from a table and can have a WHERE clause. Logs individual row deletions.<br>
+        - <b>TRUNCATE:</b> Removes all rows from a table and resets identity. Faster but not logged row by row.
+      </p>
+    </div>
+
+    <!-- Additional Questions -->
+    <div class="question">
+      <h3>21. What are SQL constraints?</h3>
+      <p>Constraints are rules enforced on table columns to maintain data integrity:</p>
+      <ul>
+        <li><b>NOT NULL:</b> Ensures column cannot have NULL values.</li>
+        <li><b>UNIQUE:</b> Ensures all values in a column are unique.</li>
+        <li><b>CHECK:</b> Ensures values meet a specific condition.</li>
+        <li><b>DEFAULT:</b> Sets a default value for a column.</li>
+        <li><b>FOREIGN KEY:</b> Establishes a relationship between two tables.</li>
+      </ul>
+    </div>
+
+    <div class="question">
+      <h3>22. How do you use the CASE statement in SQL?</h3>
+      <p>The CASE statement is used for conditional logic within SQL queries:</p>
+      <pre><code>
+SELECT employee_id, 
+       CASE 
+           WHEN salary &gt; 5000 THEN 'High'
+           WHEN salary BETWEEN 3000 AND 5000 THEN 'Medium'
+           ELSE 'Low'
+       END AS Salary_Level
+FROM employees;
+      </code></pre>
+    </div>
+
+    <div class="question">
+      <h3>23. Explain the difference between OLTP and OLAP.</h3>
+      <p>
+        - <b>OLTP (Online Transaction Processing):</b> Handles day-to-day database operations like insert, update, delete.<br>
+        - <b>OLAP (Online Analytical Processing):</b> Used for analytical queries and data aggregation.
+      </p>
+    </div>
+
+    <div class="question">
+      <h3>24. How do you create a composite key?</h3>
+      <p>A composite key is created using multiple columns to uniquely identify a row in a table:</p>
+      <pre><code>
+CREATE TABLE orders (
+    order_id INT,
+    product_id INT,
+    quantity INT,
+    PRIMARY KEY (order_id, product_id)
+);
+      </code></pre>
+    </div>
+
+    <div class="question">
+      <h3>25. What is the purpose of the COALESCE function?</h3>
+      <p>The COALESCE function returns the first non-NULL value from a list of expressions:</p>
+      <pre><code>
+SELECT COALESCE(NULL, NULL, 'SQL', 'Backup') AS result;
+-- Output: SQL
+      </code></pre>
+    </div>
+
+    <div class="question">
+      <h3>26. How do you use window functions in SQL?</h3>
+      <p>Window functions perform calculations across a set of rows related to the current row:</p>
+      <pre><code>
+SELECT employee_id, 
+       salary, 
+       RANK() OVER (ORDER BY salary DESC) AS rank
+FROM employees;
+      </code></pre>
+    </div>
+
+    <div class="question">
+      <h3>27. Explain the difference between a temporary table and a CTE.</h3>
+      <ul>
+        <li><b>Temporary Table:</b> Created explicitly and persists until dropped or the session ends.</li>
+        <li><b>CTE (Common Table Expression):</b> A temporary result set used within a single query scope.</li>
+      </ul>
+    </div>
+
+    <div class="question">
+      <h3>28. How do you create a recursive query using a CTE?</h3>
+      <p>Recursive CTEs allow hierarchical data queries:</p>
+      <pre><code>
+WITH cte_name AS (
+    SELECT column1, column2
+    FROM table
+    WHERE condition
+    UNION ALL
+    SELECT column1, column2
+    FROM table
+    JOIN cte_name ON condition
+)
+SELECT * FROM cte_name;
+      </code></pre>
+    </div>
+
+    <!-- Back Button -->
+    <a href="updatedcourse.html" class="back-button">Back to Courses</a>
+  </div>
+</body>
+</html>

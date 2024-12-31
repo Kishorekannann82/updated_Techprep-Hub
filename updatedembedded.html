@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embedded C Course</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #ffffff, #f1f2f6);
+      color: #333;
+      padding: 40px;
+      line-height: 1.6;
+    }
+
+    /* Container Styling */
+    .course-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+
+    .section-title {
+      font-size: 26px;
+      margin-top: 30px;
+      color: #2980b9;
+    }
+
+    .topic-section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #ecf0f1;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .topic-section h3 {
+      color: #16a085;
+      margin-bottom: 10px;
+    }
+
+    .topic-section ul {
+      list-style-type: none;
+      margin-left: 20px;
+    }
+
+    .topic-section li {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .topic-section pre {
+      background-color: #34495e;
+      color: #ecf0f1;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      overflow-x: auto;
+    }
+
+    .back-button {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 30px;
+      background-color: #2980b9;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #3498db;
+    }
+
+    .tips-section {
+      background-color: #f7b731;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .tips-section h3 {
+      color: #e74c3c;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .tips-section ul {
+      list-style-type: square;
+      padding-left: 20px;
+      font-size: 16px;
+    }
+
+    .tips-section li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="course-container">
+    <h1>Embedded C Programming Course</h1>
+
+    <p>Welcome to the Embedded C Programming Course! In this course, you will learn the fundamentals of Embedded C, a powerful programming language used in embedded systems development. This guide covers core concepts, practical applications, and essential techniques for working with embedded systems, microcontrollers, and low-level hardware programming.</p>
+
+    <!-- Introduction to Embedded C -->
+    <div class="topic-section">
+      <h3>1. Introduction to Embedded C</h3>
+      <p>Embedded C is an extension of the C programming language specifically designed for programming embedded systems. It provides low-level access to hardware and allows you to write efficient code for systems with constrained resources.</p>
+      <ul>
+        <li><b>Purpose of Embedded C:</b> To program embedded systems with minimal resource usage and optimized performance.</li>
+        <li><b>Key Features:</b> Direct hardware control, low-level bit manipulation, fast execution, and minimal memory consumption.</li>
+        <li><b>Applications:</b> Used in systems like microcontrollers, embedded sensors, robots, automotive control systems, and IoT devices.</li>
+      </ul>
+    </div>
+
+    <!-- Basic Embedded C Concepts -->
+    <div class="topic-section">
+      <h3>2. Basic Embedded C Concepts</h3>
+      <ul>
+        <li><b>Data Types:</b> Understanding integer, character, and floating-point data types in Embedded C.</li>
+        <li><b>Pointer Arithmetic:</b> How pointers are used to access memory directly.</li>
+        <li><b>Memory Management:</b> Efficient use of RAM and Flash memory in embedded systems.</li>
+        <li><b>Control Structures:</b> Using if-else, for loops, and switch-case statements in Embedded C.</li>
+      </ul>
+      <pre><code>
+/* Example of using pointer arithmetic */
+int main() {
+    int num = 10;
+    int* ptr = &num;
+    *ptr = 20;  // Dereferencing pointer to change the value of num
+    printf("%d", num);  // Output: 20
+    return 0;
+}
+      </code></pre>
+    </div>
+
+    <!-- Embedded C Programming for Microcontrollers -->
+    <div class="topic-section">
+      <h3>3. Embedded C Programming for Microcontrollers</h3>
+      <ul>
+        <li><b>Setting up the development environment:</b> Installing tools like GCC, MPLAB X IDE, and STM32CubeMX.</li>
+        <li><b>Interfacing with hardware:</b> Writing code to control LEDs, switches, motors, and sensors.</li>
+        <li><b>Working with timers and interrupts:</b> Managing time-sensitive tasks and external events using interrupts.</li>
+      </ul>
+      <pre><code>
+/* Example: Turning on an LED on a microcontroller */
+#include <avr/io.h>
+int main(void) {
+    DDRB |= (1 << PB0); // Set PB0 as output
+    while(1) {
+        PORTB |= (1 << PB0); // Turn on LED connected to PB0
+        _delay_ms(1000); // Wait for 1 second
+        PORTB &= ~(1 << PB0); // Turn off LED
+        _delay_ms(1000); // Wait for 1 second
+    }
+    return 0;
+}
+      </code></pre>
+    </div>
+
+    <!-- Advanced Topics in Embedded C -->
+    <div class="topic-section">
+      <h3>4. Advanced Topics in Embedded C</h3>
+      <ul>
+        <li><b>Real-Time Operating Systems (RTOS):</b> Learn about scheduling, task management, and inter-task communication.</li>
+        <li><b>Low-Power Programming:</b> Techniques to optimize power consumption in embedded systems.</li>
+        <li><b>Communication Protocols:</b> Implementing I2C, SPI, UART, and other communication protocols in Embedded C.</li>
+        <li><b>Optimizing Embedded C Code:</b> Writing efficient and compact code for resource-constrained environments.</li>
+      </ul>
+    </div>
+
+    <!-- Embedded C Debugging Tips -->
+    <div class="tips-section">
+      <h3>5. Debugging Tips for Embedded C</h3>
+      <ul>
+        <li><b>Use a debugger:</b> Always use a debugger to step through the code and check for errors in memory access, pointers, and hardware interactions.</li>
+        <li><b>Use printf statements:</b> Printing debug information to the console is a great way to understand the program flow.</li>
+        <li><b>Check hardware connections:</b> Ensure that all hardware connections are correct and that peripherals are properly initialized.</li>
+        <li><b>Test incrementally:</b> Write small code segments and test them before integrating into the larger program.</li>
+      </ul>
+    </div>
+
+    <!-- Essential Embedded C Libraries -->
+    <div class="topic-section">
+      <h3>6. Essential Embedded C Libraries</h3>
+      <ul>
+        <li><b>avr-libc:</b> The standard C library for AVR microcontrollers.</li>
+        <li><b>HAL (Hardware Abstraction Layer):</b> A higher-level library to interface with hardware peripherals on various microcontrollers.</li>
+        <li><b>CMSIS:</b> ARM’s software interface for Cortex-M microcontrollers.</li>
+        <li><b>FreeRTOS:</b> A popular open-source real-time operating system for embedded systems.</li>
+      </ul>
+    </div>
+
+    <!-- Embedded C Interview Questions -->
+    <div class="topic-section">
+      <h3>7. Embedded C Interview Questions</h3>
+      <ul>
+        <li><b>Explain the difference between a pointer and a reference in Embedded C.</b></li>
+        <li><b>What are interrupts, and how do they work in embedded systems?</b></li>
+        <li><b>How do you optimize memory usage in Embedded C?</b></li>
+        <li><b>Describe how a watchdog timer functions and when would you use it?</b></li>
+        <li><b>What is the role of the microcontroller's clock in embedded programming?</b></li>
+      </ul>
+    </div>
+
+    <a href="updatedcourse.html" class="back-button">Back to Course</a>
+  </div>
+</body>
+</html>
